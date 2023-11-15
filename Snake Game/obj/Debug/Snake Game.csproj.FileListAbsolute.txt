@@ -1,0 +1,10 @@
+C:\Users\Emil\Documents\Programering\Min programering\Snake Game\bin\Debug\Snake Game.exe.config
+C:\Users\Emil\Documents\Programering\Min programering\Snake Game\bin\Debug\Snake Game.exe
+C:\Users\Emil\Documents\Programering\Min programering\Snake Game\bin\Debug\Snake Game.pdb
+C:\Users\Emil\Documents\Programering\Min programering\Snake Game\obj\Debug\Snake Game.csproj.AssemblyReference.cache
+C:\Users\Emil\Documents\Programering\Min programering\Snake Game\obj\Debug\Snake_Game.Form1.resources
+C:\Users\Emil\Documents\Programering\Min programering\Snake Game\obj\Debug\Snake_Game.Properties.Resources.resources
+C:\Users\Emil\Documents\Programering\Min programering\Snake Game\obj\Debug\Snake Game.csproj.GenerateResource.cache
+C:\Users\Emil\Documents\Programering\Min programering\Snake Game\obj\Debug\Snake Game.csproj.CoreCompileInputs.cache
+C:\Users\Emil\Documents\Programering\Min programering\Snake Game\obj\Debug\Snake Game.exe
+C:\Users\Emil\Documents\Programering\Min programering\Snake Game\obj\Debug\Snake Game.pdb
