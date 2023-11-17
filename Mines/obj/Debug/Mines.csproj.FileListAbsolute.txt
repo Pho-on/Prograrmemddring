@@ -8,3 +8,13 @@ C:\Users\Emil\Documents\Programering\Min programering\Mines\obj\Debug\Mines.cspr
 C:\Users\Emil\Documents\Programering\Min programering\Mines\obj\Debug\Mines.csproj.CoreCompileInputs.cache
 C:\Users\Emil\Documents\Programering\Min programering\Mines\obj\Debug\Mines.exe
 C:\Users\Emil\Documents\Programering\Min programering\Mines\obj\Debug\Mines.pdb
+C:\Users\Emil\source\repos\Prograrmemddring\Mines\bin\Debug\Mines.exe.config
+C:\Users\Emil\source\repos\Prograrmemddring\Mines\bin\Debug\Mines.exe
+C:\Users\Emil\source\repos\Prograrmemddring\Mines\bin\Debug\Mines.pdb
+C:\Users\Emil\source\repos\Prograrmemddring\Mines\obj\Debug\Mines.csproj.AssemblyReference.cache
+C:\Users\Emil\source\repos\Prograrmemddring\Mines\obj\Debug\Mines.Form1.resources
+C:\Users\Emil\source\repos\Prograrmemddring\Mines\obj\Debug\Mines.Properties.Resources.resources
+C:\Users\Emil\source\repos\Prograrmemddring\Mines\obj\Debug\Mines.csproj.GenerateResource.cache
+C:\Users\Emil\source\repos\Prograrmemddring\Mines\obj\Debug\Mines.csproj.CoreCompileInputs.cache
+C:\Users\Emil\source\repos\Prograrmemddring\Mines\obj\Debug\Mines.exe
+C:\Users\Emil\source\repos\Prograrmemddring\Mines\obj\Debug\Mines.pdb

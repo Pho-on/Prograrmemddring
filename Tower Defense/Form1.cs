@@ -37,15 +37,15 @@ namespace Tower_Defense
             //Bitmap BushTile = new Bitmap(@"C:\Users\Emil\Documents\Sprites\Sprites\bush_tile.png");
 
             //Water Tiles:
-            Bitmap FullWater = new Bitmap(@"C:\Users\Emil\Documents\Sprites\Sprites\WaterTiles\47.png");
-            Bitmap MovingWater = new Bitmap(@"C:\Users\Emil\Documents\Sprites\Sprites\WaterTiles\48.png");
-            Bitmap WaterBottomLeft = new Bitmap(@"C:\Users\Emil\Documents\Sprites\Sprites\WaterTiles\17.png");
-            Bitmap WaterBottomRight = new Bitmap(@"C:\Users\Emil\Documents\Sprites\Sprites\WaterTiles\23.png");
-            Bitmap WaterTopLeft = new Bitmap(@"C:\Users\Emil\Documents\Sprites\Sprites\WaterTiles\1.png");
-            Bitmap WaterTopRight = new Bitmap(@"C:\Users\Emil\Documents\Sprites\Sprites\WaterTiles\4.png");
-            Bitmap WaterSide = new Bitmap(@"C:\Users\Emil\Documents\Sprites\Sprites\WaterTiles\12.png");
-            Bitmap WaterPad = new Bitmap(@"C:\Users\Emil\Documents\Sprites\Sprites\WaterTiles\46.png");
-            Bitmap WaterTop = new Bitmap(@"C:\Users\Emil\Documents\Sprites\Sprites\WaterTiles\3.png");
+            Bitmap FullWater = new Bitmap(@"C:\Users\Emil\Documents\Sprites\Sprites\47.png");
+            Bitmap MovingWater = new Bitmap(@"C:\Users\Emil\Documents\Sprites\Sprites\48.png");
+            Bitmap WaterBottomLeft = new Bitmap(@"C:\Users\Emil\Documents\Sprites\Sprites\17.png");
+            Bitmap WaterBottomRight = new Bitmap(@"C:\Users\Emil\Documents\Sprites\Sprites\23.png");
+            Bitmap WaterTopLeft = new Bitmap(@"C:\Users\Emil\Documents\Sprites\Sprites\1.png");
+            Bitmap WaterTopRight = new Bitmap(@"C:\Users\Emil\Documents\Sprites\Sprites\4.png");
+            Bitmap WaterSide = new Bitmap(@"C:\Users\Emil\Documents\Sprites\Sprites\12.png");
+            Bitmap WaterPad = new Bitmap(@"C:\Users\Emil\Documents\Sprites\Sprites\46.png");
+            Bitmap WaterTop = new Bitmap(@"C:\Users\Emil\Documents\Sprites\Sprites\3.png");
 
             Bitmap BridgeTile = new Bitmap(@"C:\Users\Emil\Documents\Sprites\Sprites\bridge_tile.png");
 
