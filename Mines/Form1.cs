@@ -32,6 +32,10 @@ namespace Mines
             InitializeComponent();
             btnMines3.ForeColor = Color.Blue;
             drawBoard((int)Math.Sqrt(Field));
+            foreach (PictureBox square in squaresList)
+            {
+                square.Enabled = false;
+            }
         }
 
         void drawBoard(int amount)
@@ -95,10 +99,13 @@ namespace Mines
 
         private void tbxSaldo_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            if (IsStringValid(tbxSaldo.Text))
             {
-                tbxSaldo.Enabled = false;
-                enableButtons(true);
+                if (e.KeyCode == Keys.Enter)
+                {
+                    tbxSaldo.Enabled = false;
+                    enableButtons(true);
+                }
             }
         }
 
@@ -159,6 +166,7 @@ namespace Mines
 
         private void btnMines1_Click(object sender, EventArgs e)
         {
+            btnInsats.Text = "Insats";
             Mines = int.Parse(btnMines1.Text);
             Diamonds = Field - Mines;
             btnMines1.ForeColor = Color.Blue;
@@ -170,6 +178,7 @@ namespace Mines
 
         private void btnMines2_Click(object sender, EventArgs e)
         {
+            btnInsats.Text = "Insats";
             Mines = int.Parse(btnMines2.Text);
             Diamonds = Field - Mines;
             btnMines1.ForeColor = Color.Black;
@@ -181,6 +190,7 @@ namespace Mines
 
         private void btnMines3_Click(object sender, EventArgs e)
         {
+            btnInsats.Text = "Insats";
             Mines = int.Parse(btnMines3.Text);
             Diamonds = Field - Mines;
             btnMines1.ForeColor = Color.Black;
@@ -192,6 +202,7 @@ namespace Mines
 
         private void btnMines4_Click(object sender, EventArgs e)
         {
+            btnInsats.Text = "Insats";
             Mines = int.Parse(btnMines4.Text);
             Diamonds = Field - Mines;
             btnMines1.ForeColor = Color.Black;
@@ -199,24 +210,6 @@ namespace Mines
             btnMines3.ForeColor = Color.Black;
             btnMines4.ForeColor = Color.Blue;
             tbxMinesCustom.ForeColor = Color.Black;
-        }
-
-        private void tbxMinesCustom_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter && int.Parse(tbxMinesCustom.Text) < Field)
-            {
-                Mines = int.Parse(tbxMinesCustom.Text);
-                Diamonds = Field - Mines;
-                btnMines1.ForeColor = Color.Black;
-                btnMines2.ForeColor = Color.Black;
-                btnMines3.ForeColor = Color.Black;
-                btnMines4.ForeColor = Color.Black;
-                tbxMinesCustom.ForeColor = Color.Blue;
-            }
-            else
-            {
-                tbxMinesCustom.ForeColor = Color.Black;
-            }
         }
 
         private void rbtn3x3_CheckedChanged(object sender, EventArgs e)
@@ -230,11 +223,28 @@ namespace Mines
 
         private void tbxMinesCustom_TextChanged(object sender, EventArgs e)
         {
-            btnMines1.ForeColor = Color.Black;
-            btnMines2.ForeColor = Color.Black;
-            btnMines3.ForeColor = Color.Black;
-            btnMines4.ForeColor = Color.Black;
-            tbxMinesCustom.ForeColor = Color.Blue;
+            if (IsStringValid(tbxMinesCustom.Text))
+            {
+                if (int.Parse(tbxMinesCustom.Text) < Field)
+                {
+                    btnInsats.Text = "Insats";
+                    Mines = double.Parse(tbxMinesCustom.Text);
+                    btnMines1.ForeColor = Color.Black;
+                    btnMines2.ForeColor = Color.Black;
+                    btnMines3.ForeColor = Color.Black;
+                    btnMines4.ForeColor = Color.Black;
+                    tbxMinesCustom.ForeColor = Color.Blue;
+                }
+                else
+                {
+                    btnInsats.Text = "För många minor";
+                }
+            }
+            
+        }
+        bool IsStringValid(string s)
+        {
+            return int.TryParse(s, out int result);
         }
 
         private void rbtn5x5_CheckedChanged(object sender, EventArgs e)
@@ -257,20 +267,20 @@ namespace Mines
 
         private void tbxInsats_TextChanged(object sender, EventArgs e)
         {
-            if (tbxInsats.Text == string.Empty)
+            if (IsStringValid(tbxInsats.Text))
             {
-                return;
+                if (double.Parse(tbxInsats.Text) < double.Parse(tbxSaldo.Text))
+                {
+                    btnInsats.Enabled = true;
+                    btnInsats.Text = "Insats";
+                }
+                else
+                {
+                    btnInsats.Text = "För högt bet";
+                    btnInsats.Enabled = true;
+                }
             }
-            if (double.Parse(tbxInsats.Text) < double.Parse(tbxSaldo.Text))
-            {
-                btnInsats.Enabled = true;
-                btnInsats.Text = "Insats";
-            }
-            else
-            {
-                btnInsats.Text = "För högt bet";
-                btnInsats.Enabled = true;
-            }
+            
         }
 
         private void rbtn9x9_CheckedChanged(object sender, EventArgs e)
@@ -284,31 +294,34 @@ namespace Mines
 
         private void btnInsats_Click(object sender, EventArgs e)
         {
-            if (double.Parse(tbxSaldo.Text) - double.Parse(tbxInsats.Text) < 0 && gaming == false)
+            if (Mines < Field)
             {
-
-            }
-            if (gaming == true)
-            {
-                win();
-                gaming = false;
-                p = 1;
-            }
-            else if (!(double.Parse(tbxSaldo.Text) - double.Parse(tbxInsats.Text) < 0))
-            {
-                foreach (PictureBox pbx in squaresList)
+                if (gaming == true)
                 {
-                    Controls.Remove(pbx);
+                    win();
+                    gaming = false;
+                    p = 1;
                 }
-                squaresList.Clear();
-                minesList.Clear();
-                lblSaldo.Text = "Saldo:";
-                tbxSaldo.Text = Math.Round(double.Parse(tbxSaldo.Text) - double.Parse(tbxInsats.Text), 2).ToString();
-                enableButtons(false);
-                drawBoard((int)Math.Sqrt(Field));
-                btnInsats.Text = "Ta ut";
-                gaming = true;
-                p = 1;
+                else if (!(double.Parse(tbxSaldo.Text) - double.Parse(tbxInsats.Text) < 0))
+                {
+                    foreach (PictureBox pbx in squaresList)
+                    {
+                        Controls.Remove(pbx);
+                    }
+                    squaresList.Clear();
+                    minesList.Clear();
+                    lblSaldo.Text = "Saldo:";
+                    tbxSaldo.Text = Math.Round(double.Parse(tbxSaldo.Text) - double.Parse(tbxInsats.Text), 2).ToString();
+                    enableButtons(false);
+                    drawBoard((int)Math.Sqrt(Field));
+                    btnInsats.Text = "Ta ut";
+                    gaming = true;
+                    p = 1;
+                }
+            }
+            else
+            {
+                btnInsats.Text = "För många minor";
             }
         }
     }

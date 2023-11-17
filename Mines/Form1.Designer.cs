@@ -210,7 +210,6 @@
             this.tbxMinesCustom.Size = new System.Drawing.Size(42, 20);
             this.tbxMinesCustom.TabIndex = 13;
             this.tbxMinesCustom.TextChanged += new System.EventHandler(this.tbxMinesCustom_TextChanged);
-            this.tbxMinesCustom.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbxMinesCustom_KeyDown);
             // 
             // label2
             // 
